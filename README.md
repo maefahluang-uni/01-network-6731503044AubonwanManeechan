@@ -20,7 +20,7 @@ The `MockWebServer` in package `th.mfu` serves the web server in our system. It 
 4. Finally, close the client socket 
 5. Study the code in `main()` and tell me What it does?
 ```
- write your through here.
+The main() method creates and runs MockWebServer on ports 8080 and 8081 using threads. This allows the servers to handle browser requests at the same time and respond with HTML like "Hello, Web! on Port XXXX".
 ```
 6. Run the `main()`, point the web browser to `http://localhost:8080` and `http://localhost:8081`
 It should shows a simple HTML with the word such as  `Hello, Web! on Port 8080`.
@@ -52,7 +52,11 @@ Think about the following,  modify the code to experiment it and put your though
 - What would be the benefit of running many instances?
 
 ```
-  Your thought here...
+ - We can run MockWebServer on different ports by passing a new port number in the constructor, e.g., new MockWebServer(8082).
+- We can run more than 2 instances by starting multiple threads with different port numbers.
+- To change the HTML content, modify the response string to include elements like <table>, <img>, or more text.
+- Running many instances helps support more users and simulates real-world services running on separate ports.
+
 ```
 **Please push the code back to Github to submit this lab**
 After you push, ensure you have green checkmark on the repository.
